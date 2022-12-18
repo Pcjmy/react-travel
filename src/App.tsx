@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import { Header, Footer, SideMenu, Carousel, ProductCollection } from './components';
+import { Header, Footer, SideMenu, Carousel, ProductCollection, BusinessPartners } from './components';
 import { Typography } from 'antd';
 import { Row, Col } from 'antd';
 import { productList1, productList2, productList3 } from './mockups';
@@ -35,6 +35,7 @@ function App() {
           sideImage={sideImage3}
           products={productList3}
         />
+        <BusinessPartners />
       </div>
       <Footer />
     </div>

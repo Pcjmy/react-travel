@@ -12,6 +12,15 @@ npm install @types/react-router-dom --save-dev
 UI框架
 [Ant Design](https://ant.design/index-cn)
 
+### 路由系统
+
+网站路由系统的要求
+
++ 路由导航与原生浏览器操作行为一致`<BorwserRouter />`
++ 路由的路径解析原理与原生浏览器一致，可以自动识别url路径`<Route />`
++ 路径的切换以页面为单位，不要页面堆叠`<Switch />`
+
+
 ### 遇到的问题
 
 ```shell

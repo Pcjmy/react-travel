@@ -1,6 +1,7 @@
 import React from 'react';
-import { Image, Typography } from 'antd';
-import { withRouter, RouteComponentProps } from 'react-router-dom';
+import { Image, Typography } from "antd";
+import { withRouter, RouteComponentProps } from "react-router-dom";
+import { match } from 'minimatch';
 
 interface PropsType extends RouteComponentProps {
     id: string | number;
@@ -20,16 +21,16 @@ const ProductImageComponent: React.FC<PropsType> = ({
     location,
     match
 }) => {
-    // console.log(history)
-    // console.log(location)
-    // console.log(match)
+    // console.log(history); 
+    // console.log(location);
+    // console.log(match);
     return (
         <div onClick={() => history.push(`detail/${id}`)}>
-            {size === "large" ? (
+            {size == "large" ? (
                 <Image src={imageSrc} height={285} width={490} />
             ) : (
                     <Image src={imageSrc} height={120} width={240} />
-            )}
+                )}  
             <div>
                 <Typography.Text type="secondary">
                     {title.slice(0, 25)}
@@ -41,5 +42,23 @@ const ProductImageComponent: React.FC<PropsType> = ({
         </div>
     );
 }
-
-export const ProductImage = withRouter(ProductImageComponent)
+export const ProductImage = withRouter(ProductImageComponent);
+// export const ProductImage:React.FC<PropsType> = ({ id, size, imageSrc, price, title }) => {
+//     return (
+//         <>
+//             {size == "large" ? (
+//                 <Image src={imageSrc} height={285} width={490} />
+//             ) : (
+//                     <Image src={imageSrc} height={120} width={240} />
+//             )}
+//             <div>
+//                 <Typography.Text type="secondary">
+//                     {title.slice(0, 25)}
+//                 </Typography.Text>
+//                 <Typography.Text type="danger" strong>
+//                     ￥ {price} 起
+//                 </Typography.Text>
+//             </div>
+//         </>
+//     );
+// }

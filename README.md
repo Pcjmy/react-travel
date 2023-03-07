@@ -9,6 +9,9 @@ npm install react-router-dom@5.2.0
 npm install @types/react-router-dom --save-dev
 ```
 
+node v16.12.0
+npm 8.1.0
+
 UI框架
 [Ant Design](https://ant.design/index-cn)
 
